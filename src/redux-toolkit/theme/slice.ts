@@ -10,7 +10,11 @@ const themeinitialState =
 
 export const themeSlice = createSlice({
   name: "theme",
-  initialState: themeinitialState || { value: "light" },
+  initialState:
+    themeinitialState &&
+    (themeinitialState.value === "light" || themeinitialState.value === "dark")
+      ? themeinitialState
+      : { value: "light" },
   reducers: themeReducers,
 });
 

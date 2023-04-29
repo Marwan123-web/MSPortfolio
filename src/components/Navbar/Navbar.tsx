@@ -17,7 +17,7 @@ const Navbar = () => {
   const theme = useSelector((state: any) => state.theme.value);
 
   const toggleTheme = () => {
-    let newTheme = theme == "dark" ? "light" : "dark";
+    let newTheme = theme === "dark" ? "light" : "dark";
     dispatch(updateTheme(newTheme));
   };
 
