@@ -17,7 +17,12 @@ const ScrollToTop = () => {
   return isVisible ? (
     <div className="scroll-top">
       <a href="#top">
-        <IconImg src={RedirectTop} alt={"RedirectTop"} />
+        <IconImg
+          src={RedirectTop}
+          alt={"RedirectTop"}
+          width="50px"
+          height="50px"
+        />
       </a>
     </div>
   ) : null;
